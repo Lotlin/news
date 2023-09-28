@@ -1,0 +1,32 @@
+.request {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.request__line--margin-bottom {
+  margin-bottom: 20px;
+}
+
+.request__line--double-margin-bottom {
+  margin-bottom: 40px;
+}
+
+.request__title {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.request__news-wrapper {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}
+
+@media(max-width: 1440px) {
+  .request {
+    display: none;
+  }
+}
