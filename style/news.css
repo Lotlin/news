@@ -1,10 +1,19 @@
 .news {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.news__item {
   position: relative;
   flex-basis: 270px;
+  min-height: 360px;
 }
 
 .news__img {
   margin-bottom: 10px;
+  width: 270px;
+  height: 200px;
 }
 
 .news__title {
@@ -32,6 +41,7 @@
 }
 
 .news__arrow {
+  display: inline-block;
   position: absolute;
   top: 215px;
   right: 0;

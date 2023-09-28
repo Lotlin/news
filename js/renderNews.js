@@ -1,0 +1,16 @@
+import {renderNewsitem} from './renderElements.js';
+
+export const renderHeadlinesNews = (data, newsCount) => {
+  const template = document.createDocumentFragment();
+  data.length = newsCount;
+
+  const news = data.map(item => {
+    const newsItem = renderNewsitem(item);
+
+    return newsItem;
+  });
+
+  template.append(...news);
+
+  return template;
+};

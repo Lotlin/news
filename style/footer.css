@@ -1,13 +1,18 @@
 .footer {
-  padding-top: 11px;
+  padding-top: 25px;
   padding-bottom: 21px;
 }
 
-.footer__container {
+.footer__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.footer__line {
+  margin-bottom: 22px;
+}
+
 
 .footer__copyright {
   align-self: flex-end;  

@@ -1,6 +1,11 @@
 .request {
+  display: none;
   padding-top: 10px;
   padding-bottom: 20px;
+}
+
+.request--visible {
+  display: block;
 }
 
 .request__line--margin-bottom {
@@ -23,10 +28,4 @@
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 40px;
-}
-
-@media(max-width: 1440px) {
-  .request {
-    display: none;
-  }
 }

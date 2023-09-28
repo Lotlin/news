@@ -1,0 +1,18 @@
+.headlines {
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
+.headlines__title {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.headlines__line--margin-bottom {
+  margin-bottom: 20px;
+}
+
+.headlines__line--double-margin-bottom {
+  margin-bottom: 40px;
+}
