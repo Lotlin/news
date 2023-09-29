@@ -1,4 +1,3 @@
-import {headLineNewsCount} from './data.js';
 const showError = (err, data = '') => {
   console.warn(err, data);
 };
@@ -9,7 +8,7 @@ export const fetchRequest = async (postfix, {
   callback,
   body,
   headers,
-}, URL) => {
+}, URL, newsCount) => {
   try {
     const options = {
       method,
@@ -24,8 +23,8 @@ export const fetchRequest = async (postfix, {
       let data = await response.json();
       data = data.articles;
       // console.log(data);
-      console.log('data: ', data[1]);
-      if (callback) return callback(data, headLineNewsCount);
+      // console.log('data: ', data[1]);
+      if (callback) return callback(data, newsCount);
       return;
     }
 
@@ -35,4 +34,9 @@ export const fetchRequest = async (postfix, {
   }
 };
 
-export default fetchRequest;
+export const changeElemHeight = (arr, neededHeight) => {
+  arr.forEach(elem => {
+    elem.style.height = `${neededHeight}px`;
+  });
+};
+

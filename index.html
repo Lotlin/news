@@ -16,19 +16,20 @@
       <div class="header__container container">
         <img class="header__logo logo" src="img/logo.svg" alt="логотип Only fresh news">
   
-        <form class="header__form"  action="#" id="form">
-          <label>
-            <input class="header__form-input" type="text" placeholder="Я хочу узнать про...">
+        <form class="header__form"  action="https://jsonplaceholder.typicode.com/todos/1" id="form">
+          <label class="header__form-label">
+            <input class="header__form-input" name="search" type="text" placeholder="Я хочу узнать про..." required>
           </label>
-          <button class="header__form-button">
+
+          <button class="header__form-button" type="submit">
             <img src="img/search.svg" alt="лупа">
           </button>
         </form>
         
         <select class="header__form-select" name="country" form="form">
-          <option value="Russia" selected>Россия</option>
-          <option value="Spain">Испания</option>
-          <option value="USA">США</option>
+          <option value="ru" selected>Россия</option>
+          <option value="fr">Франция</option>
+          <option value="us">США</option>
         </select>
       </div>
     </header>
@@ -43,6 +44,7 @@
           <div class="request__line line request__line--double-margin-bottom"></div>
     
           <ul class="request__news-wrapper news">
+            <!--
             <li class="request__news-item news__item">
               <img class="news__img" src="img/foto.jpg" alt="фото для иллюстрации новости">
               <h2 class="news__title">В России начали выпускать суверенные печатные платы — в них только отечественное сырьё и материалы</h2>
@@ -55,113 +57,9 @@
                 
                 <p class="news__data-author">Эрик Крипке</p>
               </div>
-              <div class="news__arrow"></div>
+              <a class="news__arrow" href="https://news.google.com/rss/articles/CBMiJGh0dHBzOi8vdXJhLm5ld3MvYXJ0aWNsZXMvMTAzNjI4NzQ1N9IBKGh0dHBzOi8vYW1wLnVyYS5uZXdzL2FydGljbGVzLzEwMzYyODc0NTc?oc=5"></a>
             </li>
-    
-            <li class="request__news-item news__item">
-              <img class="news__img" src="img/foto.jpg" alt="фото для иллюстрации новости">
-              <h2 class="news__title">В России начали выпускать суверенные печатные платы — в них только отечественное сырьё и материалы</h2>
-              <div class="news__text">Холдинг «Российские космические системы», входящий в состав «Роскосмоса»...</div>
-              <div class="news__data">
-                <div class="news__data-date-wrapper">
-                  <p class="news__data-date">16/03/2022</p>
-                  <p class="news__data-time">11:06</p>
-                </div>
-                
-                <p class="news__data-author">Эрик Крипке</p>
-              </div>
-              <div class="news__arrow"></div>
-            </li>
-    
-            <li class="request__news-item news__item">
-              <img class="news__img" src="img/foto.jpg" alt="фото для иллюстрации новости">
-              <h2 class="news__title">В России начали выпускать суверенные печатные платы — в них только отечественное сырьё и материалы</h2>
-              <div class="news__text">Холдинг «Российские космические системы», входящий в состав «Роскосмоса»...</div>
-              <div class="news__data">
-                <div class="news__data-date-wrapper">
-                  <p class="news__data-date">16/03/2022</p>
-                  <p class="news__data-time">11:06</p>
-                </div>
-                
-                <p class="news__data-author">Эрик Крипке</p>
-              </div>
-              <div class="news__arrow"></div>
-            </li>
-    
-            <li class="request__news-item news__item">
-              <img class="news__img" src="img/foto.jpg" alt="фото для иллюстрации новости">
-              <h2 class="news__title">В России начали выпускать суверенные печатные платы — в них только отечественное сырьё и материалы</h2>
-              <div class="news__text">Холдинг «Российские космические системы», входящий в состав «Роскосмоса»...</div>
-              <div class="news__data">
-                <div class="news__data-date-wrapper">
-                  <p class="news__data-date">16/03/2022</p>
-                  <p class="news__data-time">11:06</p>
-                </div>
-                
-                <p class="news__data-author">Эрик Крипке</p>
-              </div>
-              <div class="news__arrow"></div>
-            </li>
-    
-            <li class="request__news-item news__item">
-              <img class="news__img" src="img/foto.jpg" alt="фото для иллюстрации новости">
-              <h2 class="news__title">В России начали выпускать суверенные печатные платы — в них только отечественное сырьё и материалы</h2>
-              <div class="news__text">Холдинг «Российские космические системы», входящий в состав «Роскосмоса»...</div>
-              <div class="news__data">
-                <div class="news__data-date-wrapper">
-                  <p class="news__data-date">16/03/2022</p>
-                  <p class="news__data-time">11:06</p>
-                </div>
-                
-                <p class="news__data-author">Эрик Крипке</p>
-              </div>
-              <div class="news__arrow"></div>
-            </li>
-    
-            <li class="request__news-item news__item">
-              <img class="news__img" src="img/foto.jpg" alt="фото для иллюстрации новости">
-              <h2 class="news__title">В России начали выпускать суверенные печатные платы — в них только отечественное сырьё и материалы</h2>
-              <div class="news__text">Холдинг «Российские космические системы», входящий в состав «Роскосмоса»...</div>
-              <div class="news__data">
-                <div class="news__data-date-wrapper">
-                  <p class="news__data-date">16/03/2022</p>
-                  <p class="news__data-time">11:06</p>
-                </div>
-                
-                <p class="news__data-author">Эрик Крипке</p>
-              </div>
-              <div class="news__arrow"></div>
-            </li>
-    
-            <li class="request__news-item news__item">
-              <img class="news__img" src="img/foto.jpg" alt="фото для иллюстрации новости">
-              <h2 class="news__title">В России начали выпускать суверенные печатные платы — в них только отечественное сырьё и материалы</h2>
-              <div class="news__text">Холдинг «Российские космические системы», входящий в состав «Роскосмоса»...</div>
-              <div class="news__data">
-                <div class="news__data-date-wrapper">
-                  <p class="news__data-date">16/03/2022</p>
-                  <p class="news__data-time">11:06</p>
-                </div>
-                
-                <p class="news__data-author">Эрик Крипке</p>
-              </div>
-              <div class="news__arrow"></div>
-            </li>
-    
-            <li class="request__news-item news__item">
-              <img class="news__img" src="img/foto.jpg" alt="фото для иллюстрации новости">
-              <h2 class="news__title">В России начали выпускать суверенные печатные платы — в них только отечественное сырьё и материалы</h2>
-              <div class="news__text">Холдинг «Российские космические системы», входящий в состав «Роскосмоса»...</div>
-              <div class="news__data">
-                <div class="news__data-date-wrapper">
-                  <p class="news__data-date">16/03/2022</p>
-                  <p class="news__data-time">11:06</p>
-                </div>
-                
-                <p class="news__data-author">Эрик Крипке</p>
-              </div>
-              <div class="news__arrow"></div>
-            </li>
+          -->
           </ul>
         </div>
       </section>

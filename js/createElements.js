@@ -1,6 +1,10 @@
-export const createNewsLi = () => {
+export const createNewsLi = (requestNews = false) => {
   const li = document.createElement('li');
-  li.className = 'news__item';
+  if (requestNews) {
+    li.className = 'request__news-item news__item';
+  } else {
+    li.className = 'headlines__news-item news__item';
+  }
 
   return li;
 };
@@ -9,6 +13,7 @@ export const createImg = () => {
   const img = new Image();
   img.className = 'news__img';
   img.alt = 'фото для иллюстрации новости';
+  img.style.objectFit = 'cover';
 
   return img;
 };

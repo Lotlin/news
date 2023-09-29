@@ -14,3 +14,18 @@ export const renderHeadlinesNews = (data, newsCount) => {
 
   return template;
 };
+
+export const renderRequestedNews = (data, newsCount) => {
+  const template = document.createDocumentFragment();
+  data.length = newsCount;
+
+  const news = data.map(item => {
+    const newsItem = renderNewsitem(item, true);
+
+    return newsItem;
+  });
+
+  template.append(...news);
+
+  return template;
+};

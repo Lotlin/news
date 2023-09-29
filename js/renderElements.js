@@ -86,8 +86,8 @@ const renderArrow = (data) => {
   return arrow;
 };
 
-export const renderNewsitem = (data) => {
-  const li = createNewsLi();
+export const renderNewsitem = (data, requestNews = false) => {
+  const li = createNewsLi(requestNews = false);
   const img = renderImg(data);
   const title = renderTtitle(data);
   const text = renderText(data);

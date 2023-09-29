@@ -1,3 +1,4 @@
-import {initHeadlineNews} from './renderPage.js';
+import {initHeadlineNews, initRequestedNews} from './renderPage.js';
 
-initHeadlineNews();
+//initHeadlineNews();
+//initRequestedNews();

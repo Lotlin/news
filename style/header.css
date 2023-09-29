@@ -17,7 +17,12 @@
   padding: 11px 16px;
 }
 
+.header__form-label {
+  flex-basis: 100%;
+}
+
 .header__form-input {
+  width: 100%;
   padding-top: 10px;
   background-color: transparent;
   border: none;
