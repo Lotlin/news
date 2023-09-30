@@ -8,7 +8,7 @@ import {
   requestSection, requestTitle, getWrapperRequestedNews,
 } from './getElements.js';
 import {renderNews} from './renderNews.js';
-import {fetchRequest} from './service.js';
+import {fetchRequest, showPreloader, hidePreloader} from './service.js';
 
 export const initHeadlineNews = async () => {
   const headLineNews = await fetchRequest(HEADLINES__POSTFIX_DEFAULT, {
@@ -38,23 +38,27 @@ export const initRequestedNews = async () => {
     const choosingCountry = headerSearchForm.country.value;
     const newHedlinesPostfix = `${HEADLINES__POSTFIX}${choosingCountry}`;
 
-    const init = () => Promise.all([
-      fetchRequest(newREquestPostfix, {
-        callback: renderNews,
-        headers: {
-          'X-Api-Key': `${API_KEY}`,
-        },
-      }, URL_SEARCH, REQUESTED_NEWS_COUNT),
+    const init = () => {
+      showPreloader();
+      return Promise.all([
+        fetchRequest(newREquestPostfix, {
+          callback: renderNews,
+          headers: {
+            'X-Api-Key': `${API_KEY}`,
+          },
+        }, URL_SEARCH, REQUESTED_NEWS_COUNT),
 
-      fetchRequest(newHedlinesPostfix, {
-        callback: renderNews,
-        headers: {
-          'X-Api-Key': `${API_KEY}`,
-        },
-      }, URL, REQUESTED_HEADLINES_NEWS_COUNT),
-    ]);
+        fetchRequest(newHedlinesPostfix, {
+          callback: renderNews,
+          headers: {
+            'X-Api-Key': `${API_KEY}`,
+          },
+        }, URL, REQUESTED_HEADLINES_NEWS_COUNT),
+      ]);
+    };
 
     init().then(data => {
+      hidePreloader();
       wrapperRequestedNews.append(data[0]);
       wrapperHeadlineNews.append(data[1]);
     });

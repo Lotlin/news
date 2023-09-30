@@ -1,3 +1,5 @@
+import {preloader} from './getElements.js';
+
 const showError = (err, data = '') => {
   console.warn(err, data);
 };
@@ -32,4 +34,12 @@ export const fetchRequest = async (postfix, {
   } catch (err) {
     return showError(err);
   }
+};
+
+export const showPreloader = () => {
+  preloader.classList.add('preloader--visible');
+};
+
+export const hidePreloader = () => {
+  preloader.classList.remove('preloader--visible');
 };
