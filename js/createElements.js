@@ -1,10 +1,6 @@
-export const createNewsLi = (requestNews = false) => {
+export const createNewsLi = () => {
   const li = document.createElement('li');
-  if (requestNews) {
-    li.className = 'request__news-item news__item';
-  } else {
-    li.className = 'headlines__news-item news__item';
-  }
+  li.className = 'news__item';
 
   return li;
 };
@@ -14,6 +10,7 @@ export const createImg = () => {
   img.className = 'news__img';
   img.alt = 'фото для иллюстрации новости';
   img.style.objectFit = 'cover';
+  img.loading = 'lazy';
 
   return img;
 };
@@ -33,7 +30,7 @@ export const createLink = () => {
 };
 
 export const createText = () => {
-  const text = document.createElement('div');
+  const text = document.createElement('p');
   text.className = 'news__text';
 
   return text;

@@ -33,10 +33,3 @@ export const fetchRequest = async (postfix, {
     return showError(err);
   }
 };
-
-export const changeElemHeight = (arr, neededHeight) => {
-  arr.forEach(elem => {
-    elem.style.height = `${neededHeight}px`;
-  });
-};
-

@@ -3,11 +3,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 40px;
+  column-gap: 20px;
+  word-wrap: break-word;
 }
 
 .news__item {
   position: relative;
   flex-basis: 270px;
+  max-width: 270px;
   min-height: 360px;
 }
 
@@ -19,6 +22,8 @@
 
 .news__title {
   margin-bottom: 10px;
+  max-height: 39px;
+  overflow: hidden;
   width: 240px;
   font-size: 16px;
   font-weight: 700;
@@ -26,6 +31,8 @@
 
 .news__text {
   margin-bottom: 10px;
+  max-height: 65px;
+  overflow: hidden;
   font-size: 12px;
   font-weight: 300;
 }
@@ -44,6 +51,12 @@
   justify-content: space-between;
 }
 
+.news__data-author {
+  max-width: 50%;
+  max-height: 13px;
+  overflow: hidden;
+}
+
 .news__arrow {
   display: inline-block;
   position: absolute;
@@ -53,3 +66,4 @@
   height: 24px;
   background: url('../img/arrow.svg') no-repeat;
 }
+

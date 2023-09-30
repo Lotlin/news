@@ -16,15 +16,3 @@ export const getTimeFormated = data => {
 
   return formatedTime;
 };
-
-export const getHighestRenderedElem = arr => {
-  let highest = 0;
-
-  arr.forEach(elem => {
-    if (highest < elem.scrollHeight) {
-      highest = elem.scrollHeight;
-    }
-  });
-
-  return highest;
-};

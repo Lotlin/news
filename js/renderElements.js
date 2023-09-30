@@ -16,7 +16,17 @@ const renderImg = (data) => {
   return img;
 };
 
-const renderTtitle = (data) => {
+const renderLinkImg = (data) => {
+  const link = createLink();
+  link.href = data.url;
+  const img = renderImg(data);
+
+  link.append(img);
+
+  return link;
+};
+
+const renderTitle = (data) => {
   const title = createTitle();
   const link = createLink();
   link.href = data.url;
@@ -29,7 +39,11 @@ const renderTtitle = (data) => {
 
 const renderText = (data) => {
   const text = createText();
-  text.textContent = data.description;
+  const link = createLink();
+  link.href = data.url;
+  link.textContent = data.description;
+
+  text.append(link);
 
   return text;
 };
@@ -86,10 +100,10 @@ const renderArrow = (data) => {
   return arrow;
 };
 
-export const renderNewsitem = (data, requestNews = false) => {
-  const li = createNewsLi(requestNews = false);
-  const img = renderImg(data);
-  const title = renderTtitle(data);
+export const renderNewsitem = (data) => {
+  const li = createNewsLi();
+  const img = renderLinkImg(data);
+  const title = renderTitle(data);
   const text = renderText(data);
   const newsData = renderNewsData(data);
   const arrow = renderArrow(data);
