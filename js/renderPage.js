@@ -26,8 +26,7 @@ export const initRequestedNews = async () => {
     e.preventDefault();
     requestSection.classList.add('request--visible');
     requestTitle.textContent = `По вашему запросу 
-      ${headerSearchForm.search.value} найдено
-        ${REQUESTED_NEWS_COUNT} результатов`;
+      ${headerSearchForm.search.value} найдены следующие результаты`;
     const wrapperRequestedNews = getWrapperRequestedNews();
 
     const newREquestPostfix =
